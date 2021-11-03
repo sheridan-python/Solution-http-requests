@@ -11,6 +11,6 @@ data = response.json()
 print(data)
 
 #Find a list of Python repositories with the most open "help wanted" issues
-response = requests.get('https://api.github.com/search/users?q=help:>=1000&sort=followers&order=desc')
+response = requests.get('https://api.github.com/search/repositories?q=help%20wanted&has_issues:True&sort=open_issues_count')
 data = response.json()
 print(data)
